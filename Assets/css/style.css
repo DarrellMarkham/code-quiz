@@ -5,37 +5,15 @@
 }
 
 body {
-    padding: 15px;
-    margin: 15px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    border-color: black;
-    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 header {
-    display: block;
-    width: 100%;
+    padding: 100px 70px 10px 70px;
+    margin: auto;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
 };
-
-.container {
-    width: 1200;
-    max-width: 75%;
-    border-radius: 15px;
-    padding: 25px;
-    border-color: black;
-}
-
-.highscore {
-    color: #b45ce4;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: left;
-    float: left;   
-}
-
-.timer {
-    color: black;
-    float: right;
-    text-align: right;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
