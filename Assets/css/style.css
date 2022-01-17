@@ -1,11 +1,13 @@
 *,
-*::before,
+*::before 
 *::after {
   box-sizing: border-box;
+
 }
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
 header {
@@ -17,3 +19,18 @@ header {
     flex-wrap: wrap;
     align-content: center;
 };
+
+main {
+    padding: 100px 70px 10px 70px;
+    margin: auto;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+div.commands {
+    font-size: x-large;
+    font-weight: bolder;
+}
