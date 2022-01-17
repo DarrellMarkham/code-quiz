@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    padding: 15px;
+    margin: 15px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border-color: black;
+    border-radius: 10px;
+}
+header {
+    display: block;
+    width: 100%;
+};
+
+.container {
+    width: 1200;
+    max-width: 75%;
+    border-radius: 15px;
+    padding: 25px;
+    border-color: black;
+}
+
+.highscore {
+    color: #b45ce4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    float: left;   
+}
+
+.timer {
+    color: black;
+    float: right;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -11,15 +11,14 @@
 
 <body>
 
-  <header>
-    <h1 class="page-title">Code Quiz</h1>
-    <p>Try to answer the code-related questions within the time limit.
-        Keep in mind that the incorrect answers will penalize your score
-        by tem seconds!</p>
-  </header>
+    <header>
+        <div class="highscore">
+            <a href="#/">View High Score</a>
+        </div>
+        <div class="timer">Time: 00</div>
+    </header>
 
-  <main>
-    <div class="container">
+    <div class="container" id="codeContainer">
        <div id="questions">
            <div id="question">Question</div>
            <div id="answers">
@@ -29,21 +28,21 @@
                 <button class="btn">Answer 4</button>
             </div>
        </div>
+    
+        <div class="commands">
+            <button id="start-btn" class="start-btn btn">Start Quiz</button>
+            <button id="submit-btn" class="submit-btn btn">Submit</button>
+            <button id="back-btn" class="back-btn btn">Go Back</button>
+            <button id="highscore-btn" class="highscore-btn btn">View High Score</button>
+            <button id="clearscore-btn" class="clearscore-btn btn">Clear High Score</button>
+        </div>
     </div>
-    <div class="commands">
-        <button id="start-btn" class="start-btn btn">Start Quiz</button>
-        <button id="submit-btn" class="submit-btn btn">Submit</button>
-        <button id="back-btn" class="back-btn btn">Go Back</button>
-        <button id="highscore-btn" class="highscore-btn btn">View High Score</button>
-        <button id="clearscore-btn" class="clearscore-btn btn">Clear High Score</button>
-    </div>
-  </main>
 
-  <footer>
-    &copy;2022 by The Joker
-  </footer>
+    <footer>
+        &copy;2022 by The Joker
+    </footer>
 
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
