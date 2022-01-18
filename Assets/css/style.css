@@ -7,30 +7,42 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
-header {
-    padding: 100px 70px 10px 70px;
-    margin: auto;
+.wrapper {
+    margin: 100 auto 0 auto;
     display: flex;
     width: 60%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: center;
-};
-
-main {
-    padding: 100px 70px 10px 70px;
-    margin: auto;
-    display: flex;
-    width: 60%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: center;
+}
+    
+.timer {
+    position: absolute;
+    top: 25px;
+    right: 25px;
 }
 
-div.commands {
-    font-size: x-large;
-    font-weight: bolder;
+.highscore {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+a {
+    color: #b54ce4;
+    text-decoration: none;
+}
+
+.home {
+    text-align: center;
+}
+
+button {
+    border-radius: 25px;
+    padding: 4px 10px;
+    color: #fff;
+    background-color: #351c75;
+}
+
+button:hover {
+    background-color: #b54ce4;
 }
