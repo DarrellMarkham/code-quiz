@@ -50,3 +50,19 @@ button:hover {
 .answers button {
     display: block;
 }
+
+.start {
+    text-align: center;
+}
+
+.scores {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+ol {
+    padding-left: 0px;
+    max-height: 450px;
+    overflow: auto;
+}
