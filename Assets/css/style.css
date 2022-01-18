@@ -46,3 +46,7 @@ button {
 button:hover {
     background-color: #b54ce4;
 }
+
+.answers button {
+    display: block;
+}
