@@ -54,7 +54,7 @@ button:hover {
     display: block;
 }
 
-.start {
+.page {
     text-align: center;
 }
 
@@ -71,7 +71,7 @@ ol {
 }
 
 li {
-    padding 15px;
+    padding: 15px;
     list-style: decimal inside none;
 }
 
