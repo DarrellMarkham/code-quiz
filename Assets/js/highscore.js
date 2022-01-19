@@ -2,16 +2,16 @@ function printHighScores() {
     var highscore = JSON.parse(window.localStorage.getItem("highscore")) || [];
 
     highscore.sort(function(a, b) {
-        return b.score - a.score;
+        return b.highscore - a.highscore;
     });
 
-    highscore.forEach(function(score) {
+    highscore.forEach(function(highscore) {
         var liTag = document.createElement("li");
-        liTag.textCpntent=score.initials + "-" + score.score;
+        liTag.textCpntent=score.initials + "-" + highscore.highscore;
 
         var olEl=document.getElementById("highscore");
         olEl.appendChild(liTag);
-    })
+    });
 }
 
 function clearHighScore() {
@@ -21,4 +21,4 @@ function clearHighScore() {
 
 document.getElementById("clear").onclick=clearHighScore;
 
-printHighScore();
+printHighScores();

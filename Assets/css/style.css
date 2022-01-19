@@ -41,6 +41,9 @@ button {
     padding: 4px 10px;
     color: #fff;
     background-color: #351c75;
+    display: inline-block;
+    font-size: 100%;
+
 }
 
 button:hover {
@@ -65,4 +68,26 @@ ol {
     padding-left: 0px;
     max-height: 450px;
     overflow: auto;
+}
+
+li {
+    padding 15px;
+    list-style: decimal inside none;
+}
+
+li:nth-child(odd) {
+    background-color: #651c75;
+}
+
+input[type="text"] {
+    font-size: 100%;
+}
+
+.feedback {
+    font-style: italic;
+    color:black;
+}
+
+.hide {
+    display: none
 }
