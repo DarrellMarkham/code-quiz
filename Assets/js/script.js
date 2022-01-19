@@ -27,7 +27,7 @@ function getQuestion() {
 
     currentQuestion.Anwsers.array.forEach(function(answer, i) {
 
-    var var answerNode = document.createElement("button");
+    var answerNode = document.createElement("button");
     answerNode.setAttribute("class", "answer");
     answerNode.setAttribute("value", "answer");
 
@@ -111,3 +111,16 @@ function saveHighScore() {
         window.location.href = "score.html";
     }
 }
+
+function checkForEnter(event) {
+
+    if(event.key === "Enter") {
+        saveHighScore();
+    }
+}
+
+submitBtn.Btn.onclick = startQuiz;
+
+startBtn.onclick = startQuiz;
+
+initialsEl.onkeyup = checkForEnter;
