@@ -1,24 +1,24 @@
 function printHighScores() {
-    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+    var highscore = JSON.parse(window.localStorage.getItem("highscore")) || [];
 
-    highscores.sort(function(a, b) {
+    highscore.sort(function(a, b) {
         return b.score - a.score;
     });
 
-    highscores.forEach(function(score) {
+    highscore.forEach(function(score) {
         var liTag = document.createElement("li");
         liTag.textCpntent=score.initials + "-" + score.score;
 
-        var olEl=document.getElementById("highscores");
+        var olEl=document.getElementById("highscore");
         olEl.appendChild(liTag);
     })
 }
 
 function clearHighScore() {
-    window.localStorage.removeItem("highscores");
+    window.localStorage.removeItem("highscore");
     window.location.reload();
 }
 
-document.getElementById("clear").onclick=clearHighScores;
+document.getElementById("clear").onclick=clearHighScore;
 
-printHighScores();
+printHighScore();
