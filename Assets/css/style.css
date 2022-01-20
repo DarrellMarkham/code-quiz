@@ -11,8 +11,7 @@ body {
 
 .wrapper {
     margin: 100 auto 0 auto;
-    display: flex;
-    width: 60%;
+    max-width: 750px;
 }
     
 .timer {
@@ -54,7 +53,7 @@ button:hover {
     display: block;
 }
 
-.page {
+.start {
     text-align: center;
 }
 
@@ -89,5 +88,5 @@ input[type="text"] {
 }
 
 .hide {
-    display: none
+    display: none;
 }

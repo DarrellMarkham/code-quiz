@@ -1,13 +1,13 @@
-var timerEl = document.querySelector("#timer");
+var timerEl = document.querySelector("#time");
 var questionsEl = document.querySelector("#questions");
 var answersEl = document.querySelector("#answers");
 var startBtn = document.querySelector("#start");
 var answersEl = document.querySelector("#answers");
 var submitBtn = document.querySelector("#submit");
-var initialsEl = document.querySelector("#initials")
+var initialsEl = document.querySelector("#initials");
+var feedbackEl = document.querySelector("#feedback");
 
 var currentQuestionIndex=0;
-
 var time=question.length*15;
 var timerID;
 
@@ -24,11 +24,11 @@ function startQuiz() {
 function getQuestion() {
     var currentQuestion = question[currentQuestionIndex];
     var qtextEl = document.getElementById("question-qtext")
-    qtextEl.textContent= currentQuestion.qtext;
+    qtextEl.textContent = currentQuestion.qtext;
 
-    answersEl.innerHTML ="";
+    answersEl.innerHTML = "";
 
-    currentQuestion.Anwsers.array.forEach(function(answer, i) {
+    currentQuestion.anwsers.forEach(function(answer, i) {
 
     var answerNode = document.createElement("button");
     answerNode.setAttribute("class", "answer");
@@ -43,12 +43,12 @@ function getQuestion() {
     });
 }
 
-var feedbackEl = document.querySelector("#feedback");
-
 function questionClick() {
-    if(this.value !== questions[currentQuestionIndex].answer) {
+    if (this.value !== questions[currentQuestionIndex].answer) {
         time -= 15;
+        if (time < 0) {
         time = 0;
+        }
 
         timerEl.textContent = time;
         feedbackEl.textContent = "Wrong!";
@@ -62,13 +62,13 @@ function questionClick() {
     }
 
     feedbackEl.setAttribute("class", "feedback");
-        setTimeout(function() {
+    setTimeout(function() {
         feedbackEl.setAttribute("class", "feedback hide");
     }, 1000);
 
     currentQuestionIndex++
 
-    if(currentQuestionIndex === question.length) {
+    if (currentQuestionIndex === question.length) {
         quizEnd();
 
     } else {
@@ -93,16 +93,16 @@ function clockTick() {
     time--;
     timerEl.textContent = time;
 
-    if (time ,+ 0){
+    if (time <=0) {
         quizEnd();
     }
 }
 
 function saveHighScore() {
-    var initials = intitialsEl.value.trim();
+    var initials = initialsEl.value.trim();
 
     if(initials !=="") {
-        var highscore = 
+        var highscores = 
             JSON.parse(window.localStorage.getItem("highscores")) || [];
         
         var newScore = {
@@ -110,8 +110,8 @@ function saveHighScore() {
             initials: initials
         };
 
-        highscore.push(newScore);
-        window.localStorage.setItem("highscores", JSON.stringify(highscore));
+        highscores.push(newScore);
+        window.localStorage.setItem("highscores", JSON.stringify(highscores));
 
         window.location.href = "highscores.html";
     }
@@ -119,12 +119,12 @@ function saveHighScore() {
 
 function checkForEnter(event) {
 
-    if(event.key === "Enter") {
+    if (event.key === "Enter") {
         saveHighScore();
     }
 }
 
-submitBtn.Btn.onclick = startQuiz;
+submitBtn.onclick = saveHighScore;
 
 startBtn.onclick = startQuiz;
 
