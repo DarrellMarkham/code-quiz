@@ -1,4 +1,4 @@
-var timerEl = document.querySelector("#time");
+var timerEl = document.querySelector("#seconds");
 var questionsEl = document.querySelector("#questions");
 var answersEl = document.querySelector("#answers");
 var startBtn = document.querySelector("#start");
@@ -8,15 +8,15 @@ var initialsEl = document.querySelector("#initials");
 var feedbackEl = document.querySelector("#feedback");
 
 var currentQuestionIndex=0;
-var time=question.length*15;
+var seconds=question.length*15;
 var timerID;
 
 function startQuiz() {
-    var homePageEL = document.getElementById("home-page");
+    var homePageEL = document.getElementById("#home-page");
     homePageEL.setAttribute("class", "hide");
     questionsEl.removeAttribute("class");
     timerID = setInterval(clockTick, 1000);
-    timerEl.textContent=time;
+    timerEl.textContent=seconds;
 
     getQuestion();
 }
@@ -45,9 +45,9 @@ function getQuestion() {
 
 function questionClick() {
     if (this.value !== questions[currentQuestionIndex].answer) {
-        time -= 15;
-        if (time < 0) {
-        time = 0;
+        seconds -= 15;
+        if (seconds < 0) {
+        seconds = 0;
         }
 
         timerEl.textContent = time;
@@ -84,16 +84,16 @@ function quizEnd() {
     endScreenEl.removeAttribute("class");
 
     var finalScoreEl = document.getElementById("final-score");
-    finalScoreEl.textContent = time;
+    finalScoreEl.textContent = seconds;
 
     questionsEl.setAttribute("class", "hide");
 }
 
 function clockTick() {
-    time--;
-    timerEl.textContent = time;
+    seconds--;
+    timerEl.textContent = seconds;
 
-    if (time <=0) {
+    if (seconds <=0) {
         quizEnd();
     }
 }
@@ -106,7 +106,7 @@ function saveHighScore() {
             JSON.parse(window.localStorage.getItem("highscores")) || [];
         
         var newScore = {
-            score: time,
+            score: seconds,
             initials: initials
         };
 

@@ -6,24 +6,27 @@
 }
 
 body {
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .wrapper {
-    margin: 100 auto 0 auto;
-    max-width: 750px;
+    width: 600px;
+    align-items: center;
 }
     
 .timer {
-    position: absolute;
-    top: 25px;
-    right: 25px;
+    display: flexbox;
+    top: 150px;
+    right: 450px;
 }
 
 .highscores {
-    position: absolute;
-    top: 25px;
-    left: 25px;
+    display: flexbox;
+    top: 150px;
+    left: 350px;
 }
 
 a {
