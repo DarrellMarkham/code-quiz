@@ -11,46 +11,53 @@
 
   <body>
   
-    <div class="highscores">
-      <a href="highscores.html">View High Scores</a>
-    </div>
+    <header>
+      <nav>
+        <div class="highscores">
+          <a href="highscores.html">View High Scores</a>
+        </div>
 
+        <div class="timer">Time:
+          <span id="seconds">0</span>
+        </div>
+      </nav>
+    </header>
+
+    <section class="container">
     <div class="wrapper">
-      <div id="home-page" class="home">
-        <h1>Code Quiz Challenge</h1>
-        <p>
-          Want to see how much you understand about what have learned?
-          Try to answers the following code-related questions within the alloted time.
-          Answer them as fast as you can but be aware that6 incorrect answers will result in a penaty.
-        </p>
-          
-        <button id="start">Start Quiz</button>
+        <div id="home-page" class="home">
+          <h1>Code Quiz Challenge</h1>
+          <p>
+            Want to see how much you understand about what have learned?
+            Try to answers the following code-related questions within the alloted time.
+            Answer them as fast as you can but be aware that6 incorrect answers will result in a penaty.
+          </p>
+            
+          <button id="start">Start Quiz</button>
+        </div>
+
+        <div id="questions" class="hide">
+          <h2 id="question-qtext"></h2>
+          <div id="answers" class="answers"></div>
+        </div>
+
+        <div id="end-screen" class="hide">
+          <h2>All done!</h2>
+          <p>Your final score is <span id="final-score"></span></p>
+          <p>Enter initials: <input type="text" id="initials" max="3" />
+            <button id="submit">Submit</button>
+          </p>
+        </div>
+
+        <div id="feedback" class="feedback hide"></div>
+        </div>
+
       </div>
-
-      <div id="questions" class="hide">
-        <h2 id="question-qtext"></h2>
-        <div id="answers" class="answers"></div>
-      </div>
-
-      <div id="end-screen" class="hide">
-        <h2>All done!</h2>
-        <p>Your final score is <span id="final-score"></span></p>
-        <p>Enter initials: <input type="text" id="initials" max="3" /></p>
-        <button id="submit">Submit</button>
-      </div>
-
-      <div id="feedback" class="feedback hide"></div>
-      </div>
-
-    </div>
-      
-    <div class="timer">Time:
-      <span id="seconds">0</span>
-    </div>
-
+    </section>
+    
     <script src="./assets/js/script.js"></script>
     <script src="assests/js/questions.js"></script>
-    
+
   </body>
 
 </html>

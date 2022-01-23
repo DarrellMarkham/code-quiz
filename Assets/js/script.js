@@ -12,7 +12,7 @@ var seconds=question.length*15;
 var timerID;
 
 function startQuiz() {
-    var homePageEL = document.getElementById("#home-page");
+    var homePageEL = document.getElementById("home");
     homePageEL.setAttribute("class", "hide");
     questionsEl.removeAttribute("class");
     timerID = setInterval(clockTick, 1000);

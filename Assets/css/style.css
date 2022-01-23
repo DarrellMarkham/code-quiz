@@ -5,28 +5,29 @@
 
 }
 
-body {
-    display: flex;
-    flex-direction: row;
-    padding: 100px;
+body {   
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    max-width: 1100px;
+    margin: 50px auto 10px auto;
+    float: none;
+    border: black;
+    border-style: solid;
+    border-radius: 15px;
 }
 
-.wrapper {
-    width: 600px;
-    align-items: center;
-}
-    
 .timer {
-    display: flexbox;
-    top: 150px;
-    right: 450px;
+    width: 25%;
+    text-align: right;
 }
 
 .highscores {
-    display: flexbox;
-    top: 150px;
-    left: 350px;
+    width: 25%;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0px auto 0px auto;
+    float: none;
 }
 
 a {
@@ -45,7 +46,6 @@ button {
     background-color: #351c75;
     display: inline-block;
     font-size: 100%;
-
 }
 
 button:hover {
@@ -92,4 +92,16 @@ input[type="text"] {
 
 .hide {
     display: none;
+}
+
+header {
+    max-width: 1000px;
+    padding: 50px 50px 0px 50px;
+    float: none;
+}
+
+header nav {
+   display: flex;
+   justify-content: space-between;
+   align-content: space-between;
 }
