@@ -2,8 +2,8 @@ var questions = [
 
     {
         qtext: "Commonly used data types DO NOT include:",
-        answers: [" strings", " booleans", " alerts", " numbers"],
-        answer: " alerts"
+        answers: ["strings", "booleans", "alerts", "numbers"],
+        answer: "alerts"
     },
 
     {

@@ -8,6 +8,7 @@ var feedbackEl = document.querySelector("#feedback");
 
 var currentQuestionIndex=0;
 var seconds=questions.length*15;
+console.log(seconds)
 var timerID;
 
 function startQuiz() {
@@ -15,7 +16,9 @@ function startQuiz() {
     homePageEL.setAttribute("class", "hide");
     questionsEl.removeAttribute("class");
     timerID = setInterval(clockTick, 1000);
+    console.log(timerID);
     timerEl.textContent=seconds;
+    console.log(seconds);
 
     getQuestion();
 }
@@ -33,7 +36,7 @@ function getQuestion() {
     answerNode.setAttribute("class", "answer");
     answerNode.setAttribute("value", "answer");
 
-    answerNode.textContent = i + 1 + "." + answer;
+    answerNode.textContent = i + 1 + ". " + answer;
 
     answerNode.onclick = questionClick;
 
