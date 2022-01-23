@@ -24,6 +24,14 @@ header nav {
    justify-content: space-between;
 }
 
+h1 {
+    font-size: 250%;
+}
+
+p {
+    font-size: 125%;
+    text-align: justify;
+}
 .timer {
     width: 25%;
     text-align: right;
@@ -48,12 +56,12 @@ a {
 }
 
 button {
-    border-radius: 25px;
-    padding: 4px 10px;
+    border-radius: 5px;
+    padding: 10px 15px;
     color: #fff;
     background-color: #351c75;
     display: inline-block;
-    font-size: 100%;
+    font-size: 125%;
 }
 
 button:hover {
@@ -62,6 +70,14 @@ button:hover {
 
 .answers button {
     display: block;
+    min-width: 250px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-radius: 5px;
+}
+
+.qtext {
+    font-size: 24px;
 }
 
 .start {
@@ -72,6 +88,9 @@ button:hover {
     position: absolute;
     top: 10px;
     left: 10px;
+}
+h2 {
+    font-size: 200%;
 }
 
 ol {

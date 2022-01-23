@@ -2,8 +2,8 @@ var questions = [
 
     {
         qtext: "Commonly used data types DO NOT include:",
-        answers: ["strings", "booleans", "alerts", "numbers"],
-        answer: "alerts"
+        answers: [" strings", " booleans", " alerts", " numbers"],
+        answer: " alerts"
     },
 
     {
@@ -15,7 +15,7 @@ var questions = [
     {
         qtext: "Arrays in JavaScript can be used to store _____.",
         Answers: [
-            "nmbers and strings",
+            "numbers and strings",
             "other arrays",
             "booleans",
             "all of the above"

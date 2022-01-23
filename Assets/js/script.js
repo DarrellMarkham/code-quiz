@@ -1,18 +1,17 @@
+var startBtn = document.querySelector("#start");
 var timerEl = document.querySelector("#seconds");
 var questionsEl = document.querySelector("#questions");
-var answersEl = document.querySelector("#answers");
-var startBtn = document.querySelector("#start");
 var answersEl = document.querySelector("#answers");
 var submitBtn = document.querySelector("#submit");
 var initialsEl = document.querySelector("#initials");
 var feedbackEl = document.querySelector("#feedback");
 
 var currentQuestionIndex=0;
-var seconds=question.length*15;
+var seconds=questions.length*15;
 var timerID;
 
 function startQuiz() {
-    var homePageEL = document.getElementById("home");
+    var homePageEL = document.getElementById("home-page");
     homePageEL.setAttribute("class", "hide");
     questionsEl.removeAttribute("class");
     timerID = setInterval(clockTick, 1000);
@@ -22,13 +21,13 @@ function startQuiz() {
 }
 
 function getQuestion() {
-    var currentQuestion = question[currentQuestionIndex];
+    var currentQuestion = questions[currentQuestionIndex];
     var qtextEl = document.getElementById("question-qtext")
     qtextEl.textContent = currentQuestion.qtext;
 
     answersEl.innerHTML = "";
 
-    currentQuestion.anwsers.forEach(function(answer, i) {
+    currentQuestion.answers.forEach(function(answer, i) {
 
     var answerNode = document.createElement("button");
     answerNode.setAttribute("class", "answer");
@@ -50,7 +49,7 @@ function questionClick() {
         seconds = 0;
         }
 
-        timerEl.textContent = time;
+        timerEl.textContent = seconds;
         feedbackEl.textContent = "Wrong!";
         feedbackEl.style.color = "red";
         feedbackEl.style.fontSize = "400%"
@@ -127,5 +126,6 @@ function checkForEnter(event) {
 submitBtn.onclick = saveHighScore;
 
 startBtn.onclick = startQuiz;
+console.log (startBtn)
 
 initialsEl.onkeyup = checkForEnter;
