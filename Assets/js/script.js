@@ -88,20 +88,19 @@ function endQuiz() {
 
     questionsEl.setAttribute("class", "hidden");
 
-    var endScreenEl = document.getElementById("end-screen");
-    endScreenEl.removeAttribute("class");
-    console.log(endScreenEl);
 
+    var endScreenEl = document.getElementById("endscreen");
+    endScreenEl.removeAttribute("class");
+    
     var finalScoreEl = document.getElementById("final-score");
     finalScoreEl.textContent = seconds;
-    console.log(finalScoreEl);   
+    console.log(seconds);   
 }
 
 function clockTick() {
     seconds--;
     timerEl.textContent = seconds;
-    console.log(seconds);
-
+    
     if (seconds <=0) {
         endQuiz();
     }
@@ -121,7 +120,7 @@ function saveHighScore() {
 
         highscores.push(newScore);
         window.localStorage.setItem("highscores", JSON.stringify(highscores));
-
+        console.log(newScore)
         window.location.href = "highscores.html";
     }
 }
@@ -134,9 +133,9 @@ function checkForEnter(event) {
 }
 
 submitBtn.onclick = saveHighScore;
-console.log(submitBtn)
+
 
 startBtn.onclick = startQuiz;
-console.log (startBtn)
+
 
 initialsEl.onkeyup = checkForEnter;

@@ -26,6 +26,7 @@ header nav {
 
 h1 {
     font-size: 250%;
+    margin: 10px 0px 5px 0px;
 }
 
 p {
@@ -39,6 +40,12 @@ p {
 
 .highscores {
     width: 25%;
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    max-width: 650px;
+    justify-items: left;
 }
 
 .container {
@@ -84,7 +91,7 @@ button:hover {
     text-align: center;
 }
 
-.scores {
+.score {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -95,13 +102,15 @@ h2 {
 
 ol {
     padding-left: 0px;
-    max-height: 450px;
+    max-height: 300px;
     overflow: auto;
+    margin: 10px 0px 15px 0px;
 }
 
 li {
-    padding: 15px;
+    padding: 5px;
     list-style: decimal inside none;
+    background-color: #d9d3e3;
 }
 
 input[type="text"] {
@@ -116,4 +125,10 @@ input[type="text"] {
 
 .hidden {
     display: none;
+}
+
+.box {
+    max-width: 650px;
+    text-align: left;
+    margin-top: 150px;
 }

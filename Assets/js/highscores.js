@@ -2,12 +2,12 @@ function printHighScores() {
     var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
     highscores.sort(function(a, b) {
-        return b.highscores - a.highscores;
+        return b.score - a.score;
     });
 
-    highscores.forEach(function(highscores) {
+    highscores.forEach(function(score) {
         var liTag = document.createElement("li");
-        liTag.textContent=highscores.initials + "-" + highscores.highscores;
+        liTag.textContent=score.initials + "-" + score.score;
 
         var olEl=document.getElementById("highscores");
         olEl.appendChild(liTag);
