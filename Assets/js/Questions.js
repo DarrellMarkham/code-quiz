@@ -14,13 +14,8 @@ var questions = [
 
     {
         qtext: "Arrays in JavaScript can be used to store _____.",
-        Answers: [
-            "numbers and strings",
-            "other arrays",
-            "booleans",
-            "all of the above"
-        ],
-        Answer: "all the above"
+        answers: ["numbers and strings", "other arrays", "booleans", "all of the above"],
+        answer: "all of the above"
     },
 
     {
@@ -31,7 +26,7 @@ var questions = [
 
     {
         qtext: "A very useful tool used during development and dbugging for printing content to the debugger is:",
-        answers: ["JvaScript", "terminal / bash", "for loops", "consloe.log"],
+        answers: ["JvaScript", "terminal / bash", "for loops", "console.log"],
         answer: "console.log"
     },
 
@@ -66,7 +61,7 @@ var questions = [
             "'Not' Operator !",
             "All the Above"
         ],
-        answers: "All the Above"
+        answer: "All the Above"
     },
 
     {

@@ -7,18 +7,18 @@ function printHighScores() {
 
     highscores.forEach(function(highscores) {
         var liTag = document.createElement("li");
-        liTag.textCpntent=score.initials + "-" + highscores.highscores;
+        liTag.textContent=highscores.initials + "-" + highscores.highscores;
 
         var olEl=document.getElementById("highscores");
         olEl.appendChild(liTag);
     });
 }
 
-function clearHighScore() {
+function clearHighScores() {
     window.localStorage.removeItem("highscores");
     window.location.reload();
 }
 
-document.getElementById("clear").onclick=clearHighScore;
+document.getElementById("clear").onclick=clearHighScores;
 
 printHighScores();

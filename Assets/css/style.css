@@ -104,19 +104,16 @@ li {
     list-style: decimal inside none;
 }
 
-li:nth-child(odd) {
-    background-color: #651c75;
-}
-
 input[type="text"] {
     font-size: 100%;
 }
 
 .feedback {
     font-style: italic;
-    color:black;
+    color:grey;
+    border-top: 2px solid grey;
 }
 
-.hide {
+.hidden {
     display: none;
 }
