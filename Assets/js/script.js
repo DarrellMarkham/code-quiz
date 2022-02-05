@@ -27,8 +27,8 @@ function startQuiz() {
 
 function getQuestion() {
     var currentQuestion = questions[currentQuestionIndex];
-    var qtextEl = document.getElementById("question-qtext");
-    qtextEl.textContent = currentQuestion.qtext;
+    var questionEl = document.getElementById("question");
+    questionEl.textContent = currentQuestion.question;
 
     answersEl.innerHTML = "";
 
