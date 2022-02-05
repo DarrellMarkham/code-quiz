@@ -1,5 +1,3 @@
-
-
 var questionsEl = document.querySelector("#questions");
 var timerEl = document.querySelector("#seconds");
 var answersEl = document.querySelector("#answers");
