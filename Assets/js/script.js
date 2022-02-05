@@ -9,8 +9,7 @@ var initialsEl = document.querySelector("#initials");
 var feedbackEl = document.querySelector("#feedback");
 
 var currentQuestionIndex=0;
-var seconds = questions.length * 15;
-console.log(seconds);
+var seconds = questions.length*15;
 var timerID;
 
 function startQuiz() {
